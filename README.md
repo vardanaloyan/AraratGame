@@ -8,6 +8,8 @@ cd AraratGame
 sudo pip3 install -r requirements.txt
 python3 game.py
 ```
+# Configuration
+
 You can configure your custom game by doing below steps:
   1. create json file in `jsons` directory
     key in json means the object (colorname, figurename, ...)
