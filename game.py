@@ -45,7 +45,7 @@ class Main(QWidget):
 		return name
 
 	def choose_game(self):
-		self.question_lbl.setText("Ընտրիր խաղը")
+		self.question_lbl.setText("Ընտրիր խաղը (choose the game)")
 		for i in reversed(range(self.grid.count())):
 			self.grid.itemAt(i).widget().setParent(None)
 
@@ -69,7 +69,7 @@ class Main(QWidget):
 		self.setLayout(self.vbox)
 		self.question_lbl = QLabel("")
 		self.question_lbl.setFont(QFont('Arial', 16))
-		self.menu_btn = QPushButton("Մենյու")
+		self.menu_btn = QPushButton("Մենյու (Menu)")
 		self.menu_btn.clicked.connect(self.choose_game)
 
 		self.choose_game()
@@ -78,7 +78,7 @@ class Main(QWidget):
 		self.vbox.addWidget(self.menu_btn)
 
 		self.move(300, 300)
-		self.setWindowTitle('Արարատ')
+		self.setWindowTitle('Արարատ (Ararat)')
 		self.show()
 
 	def process(self):
@@ -88,7 +88,7 @@ class Main(QWidget):
 			self.correct_answer = random.choice(self.sample)
 			self.last_correct_answer = self.correct_answer
 		self.correct_answer_path = self.dictionary[self.correct_answer]
-		self.question = f"Գտիր {self.correct_answer}"
+		self.question = f"Գտիր (Find) {self.correct_answer}"
 		if self.correct_answer[-1] in self.vowels:
 			self.question += "ն"
 		else:
