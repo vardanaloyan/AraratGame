@@ -1,3 +1,4 @@
+import os
 import sys
 import json
 import random
@@ -41,7 +42,7 @@ class Main(QWidget):
 
 	def extract_name(self, name):
 		name = name[:-5]
-		name = name.split("/")[1]
+		name = name.split(os.path.sep)[1]
 		return name
 
 	def choose_game(self):
