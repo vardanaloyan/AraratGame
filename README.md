@@ -8,6 +8,17 @@ cd AraratGame
 sudo pip3 install -r requirements.txt
 python3 game.py
 ```
+
+Instructions for Mac M2
+
+```
+brew install pyqt5
+/opt/homebrew/bin/python3.11 -m pip install playsound -i http://pypi.org --trusted-host pypi.org
+/opt/homebrew/bin/python3.11 -m pip install PyObjC -i http://pypi.org --trusted-host pypi.org
+/opt/homebrew/bin/python3.11 game.py
+
+```
+
 # Configuration
 
 You can configure your custom game by doing below steps:

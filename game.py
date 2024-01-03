@@ -99,6 +99,9 @@ class Main(QWidget):
 
 		positions = [(0, 0), (0, 1), (1, 0), (1, 1)]
 
+		for i in reversed(range(self.grid.count())):
+			self.grid.itemAt(i).widget().setParent(None)
+   
 		for position, name in zip(positions, self.sample):
 			button = picButton(name)
 			button.answered.connect(self.check_answer)
